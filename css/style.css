@@ -273,7 +273,10 @@ h3 a:hover{
   color: #6D00C8;
   transition: all 500ms ease;
 }
-
+.clearfix{
+	clear:both;
+	height=3%;
+}
 .preloader{position: fixed; left:0px;top:0px;height:100%;width: 100%;z-index:999999;background-color:#ffffff;background-position:center center;background-repeat:no-repeat;background-image:url(../images/icons/preloader.gif);}
 
 input[type="text"]:focus,input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="url"]:focus, input[type="time"]:focus, select:focus, textarea:focus {
