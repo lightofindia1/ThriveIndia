@@ -2078,7 +2078,7 @@ input[type=checkbox], input[type=radio] {
 
 .page-title{
   position: relative;
-  background: url(../images/about/page-title-bg.jpg);
+  background: #6D00C8;
   width: 100%;
   background-size: cover;
   background-position: center center;
