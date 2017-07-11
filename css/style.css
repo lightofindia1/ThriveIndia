@@ -544,8 +544,14 @@ input[type="text"]:focus,input[type="email"]:focus, input[type="search"]:focus, 
 }
 .header-lower{
   position: relative;
-  background: #DBDBDB;
+  background: #6D00C8;
   width: 100%;
+}
+.header-lower *{
+	color:#fff !important;
+}
+.header-lower .navigation > li.current > a:before{
+	background:#fff !important;
 }
 .header-lower .logo{
   position: relative;
