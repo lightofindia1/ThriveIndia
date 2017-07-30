@@ -1874,7 +1874,7 @@ input[type=checkbox], input[type=radio] {
   background: #2b2e31;
   width: 100%;
   background-size: cover;
-  padding: 100px 0px 0px 0px;
+  padding: 30px 0px 0px 0px;
 }
 .footer-top-area{
   position: relative;
@@ -1953,7 +1953,7 @@ input[type=checkbox], input[type=radio] {
 .main-footer{
   position: relative;
   border-bottom: 1px solid #4f5355;
-  padding: 46px 0px 92px 0px;
+  padding: 10px 0px 20px 0px;
 }
 .main-footer-area p{
   color: #bfbfbf;
@@ -3048,4 +3048,79 @@ input[type=checkbox], input[type=radio] {
 }
 .error-section a.btn-one{
   padding: 10px 20px 11px 21px;
+}
+
+.footer-social{
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.footer-social a { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border:2px solid #ddd; /* add border to the buttons */
+    box-shadow: 0 3px 3px #999;
+    padding: 0px;
+	margin:0px 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius:27px;
+    -webkit-border-radius:27px;
+}
+
+/* facebook button class*/
+.facebookBtn{
+    background: #4060A5;
+}
+
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+
+/* twitter button class*/
+.twitterBtn{
+    background: #00ABE3;
+}
+
+.twitterBtn:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+      
+}
+
+.twitterBtn:hover{
+      color: #00ABE3;
+      background: #fff;
+      border-color: #00ABE3;
+}
+
+/* instagram button class*/
+.instagramBtn{
+    background: #cb2027;
+}
+
+.instagramBtn:before{
+      font-family: "FontAwesome";
+      content: "\f16d"; /* add instagram icon */
+}
+
+.instagramBtn:hover{
+      color: #cb2027;
+      background: #fff;
+      border-color: #cb2027;
 }

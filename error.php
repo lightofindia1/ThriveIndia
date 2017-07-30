@@ -1,3 +1,59 @@
+<?php
+$code="0";
+$msg="Unknown Error";
+if(isset($_GET["code"]))
+{
+	$code=$_GET["code"];
+	if($_GET["code"]=="400")
+	{
+		$msg="Bad Request";
+	}
+	else if($_GET["code"]=="401")
+	{
+		$msg="Unauthorized";
+	}
+	else if($_GET["code"]=="402")
+	{
+		$msg="Payment Required";
+	}
+	else if($_GET["code"]=="403")
+	{
+		$msg="Forbidden";
+	}
+	else if($_GET["code"]=="404")
+	{
+		$msg="Page Not Found";
+	}
+	else if($_GET["code"]=="408")
+	{
+		$msg="Request Timeout";
+	}
+	else if($_GET["code"]=="409")
+	{
+		$msg="Conflict";
+	}
+	else if($_GET["code"]=="500")
+	{
+		$msg="Internal Server Error";
+	}
+	else if($_GET["code"]=="501")
+	{
+		$msg="Not Implemented";
+	}
+	else if($_GET["code"]=="502")
+	{
+		$msg="Bad Gateway";
+	}
+	else if($_GET["code"]=="503")
+	{
+		$msg="Service Unavailable";
+	}
+	else if($_GET["code"]=="504")
+	{
+		$msg="Gateway Timeout";
+	}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +61,7 @@
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
 <meta http-equiv='pragma' content='no-cache'>
-<title>Contact Us | Thrive India</title>
+<title><?php echo $msg;?> | Thrive India</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
@@ -25,16 +81,11 @@
 	height:100px;
 }
 </style>
-
 </head>
 
 
 <body>
 <div class="page-wrapper">
-
-    <!-- .preloader -->
-    
-    <!-- /.preloader -->
 
     <!--Header search-->
     <section class="header-search">
@@ -63,7 +114,7 @@
             	<div class="row">
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="logo">
-                            <a href="index"><img src="images/logo.png" alt=""></a>
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-12 col-xs-12">
@@ -78,10 +129,10 @@
                                 </div>
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li><a href="index">Home</a></li>
-                                        <li><a href="about">About</a></li>
-                                        <li><a href="events">Events</a></li>
-                                        <li class="current"><a href="contact">Contact</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="events.html">Events</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -97,7 +148,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="logo">
-                            <a href="index"><img src="images/logo.png" alt=""></a>
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-12 col-xs-12">
@@ -112,10 +163,10 @@
                                 </div>
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li><a href="index">Home</a></li>
-                                        <li><a href="about">About</a></li>
-                                        <li><a href="events">Events</a></li>
-                                        <li class="current"><a href="contact">Contact</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="events.html">Events</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -127,105 +178,19 @@
     </header>
     <!--End Sticky Header-->
 
-    <!--Page Title-->
-    <section class="page-title text-center">
-        <div class="auto-container">
-            <div class="content-box">
-                <div class="section-title"><h2>Contact Us</h2></div>
-            </div>
-        </div>
-    </section>
-    <!--End Page Title-->
-
-    <!-- contact info -->
-    <section class="contact-info text-center">
+    <!-- error section -->
+    <section class="error-section error-page text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-item hvr-float-shadow">
-                        <div class="icon-box">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Address</h4>
-                            <div class="text"><p>#4&5, Divyashraya, 27th main 2nd cross Egpura VGS layout Bengaluru - 560047</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-item hvr-float-shadow">
-                        <div class="icon-box">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Phone</h4>
-                            
-							<div class="text">
-								<p><strong>Dr Leena Vijaykumar (Founder - Chairman)</strong> <br>+91 9449631244</p>
-								<p><strong>Rohan Immanuel Vijaykumar (Treasurer)</strong> <br>+91 9449631244</p>
-								<p><strong>Vijaykumar Koujalgi (Secretary)</strong> <br>+91 9448329228</p>
-							</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-item hvr-float-shadow">
-                        <div class="icon-box">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Email</h4>
-                            <div class="text"><p>thriveindia.ngo@gmail.com</div>
-                        </div>
-                    </div>
+                <div class="error-title"><?php echo str_replace('0','<i class="fa fa-frown-o" aria-hidden="true"></i>',$code);?></div>
+                <div class="title">Oops! <?php echo ucwords($msg);?>!</div>
+                <div class="search-box">
+                    <a href="index.html" class="btn-one">go to home</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- contact info end -->
-
-    <!-- contact form area -->
-    <section class="contact-form-area section-padding text-center">
-        <div class="container">
-            <div class="contact-title">
-                <div class="section-title"><h2>Get In <span>Touch</span></h2></div><br>
-            </div>
-            <div class="contact-form">
-                <form id="contact-form" name="contact_form" class="default-form" action="#" method="post">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" name="form_name" value="" placeholder="Your Name" required="">
-                            <input type="email" name="form_email" value="" placeholder="Your Email" required="">
-                            <input type="text" name="form_phone" value="" placeholder="Phone Number" required="">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea placeholder="Message" name="form_message" required=""></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-one" data-loading-text="Please wait...">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    <!-- contact form area end -->
-
-    <!-- google map area 
-    <section class="google-map-area">
-        <div 
-            class="google-map" 
-            id="contact-google-map" 
-            data-map-lat="33.652450" 
-            data-map-lng="-117.814396" 
-            data-icon-path="images/resources/map-marker.png" 
-            data-map-title="Landon, United Kingdom" 
-            data-map-zoom="12" 
-            data-markers='{
-                "marker-1": [33.652450, -117.814396, "<h4>Branch Office</h4><p>77/99 Landon UK</p>","images/resources/map-marker.png"]
-            }'>
-
-        </div>
-    </section>
-    <!-- google map area end -->
+    <!-- error section end -->
 
     <!-- main foorer area -->
     <footer class="main-footer-area">
@@ -315,11 +280,8 @@
 <script type="text/javascript" src="js/theme.js"></script>
 <script src="js/jquery.bxslider.min.js"></script>
 <script src="js/html5lightbox/html5lightbox.js"></script>
-<script src="js/jquery.countdown.js"></script> 
-<script src="js/validation.js"></script>  
+<script src="js/jquery.countdown.js"></script>  
 <script src="js/map-script.js"></script>
-<script src="js/gmaps.js"></script>
-<script src="js/map-helper.js"></script>
 <script src="js/script.js"></script> 
 
 
